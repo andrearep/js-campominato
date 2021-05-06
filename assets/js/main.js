@@ -119,4 +119,15 @@ for (var i = 0; i < 100; i++) {
 window.onclick = e => {
     var element = e.target;
     console.log(element);  // to get the element tag name alone
+    console.log(typeof (element));
+    element.style.backgroundColor = "blue";
+    element.querySelector(".display_none").style.visibility = "visible";
+    var valoreCella = element.querySelector(".display_none").innerHTML;
+    if (valoreCella == "BOMBA") {
+        alert("GAME OVER");
+        return false;
+    }
+    return true;
 }
+
+
